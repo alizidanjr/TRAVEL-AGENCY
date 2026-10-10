@@ -47,41 +47,80 @@
     <section id="packages" class="section">
       <div class="shell">
         <h2>Tour packages</h2>
+        <fieldset class="moods">
+          <legend>What kind of trip?</legend>
+          <div class="mood-options">
+            <label>All trips<input type="radio" name="mood" id="mood-all" checked></label>
+            <label>Coast<input type="radio" name="mood" id="mood-coast"></label>
+            <label>Mountains<input type="radio" name="mood" id="mood-mountains"></label>
+            <label>Culture<input type="radio" name="mood" id="mood-culture"></label>
+          </div>
+        </fieldset>
         <div class="grid">
-          <article class="card">
+          <article class="card" data-mood="coast">
             <img src="images/bali.jpg" width="1152" height="864" alt="Rice terraces above a misty Bali coast at sunrise">
             <h3>Bali Escape</h3>
             <p>Beaches, temples and rice terraces.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Arrive on the coast</li>
+              <li><span>Day 4</span> Temples and rice terraces</li>
+              <li><span>Day 7</span> A last beach morning</li>
+            </ol>
             <p class="meta"><span>7 days</span><strong>$1,290</strong></p>
           </article>
-          <article class="card">
+          <article class="card" data-mood="culture">
             <img src="images/provence.jpg" width="1152" height="864" alt="Lavender rows leading to a stone farmhouse in Provence">
             <h3>Paris &amp; Provence</h3>
             <p>Art, cafés and lavender fields.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Museums and a café</li>
+              <li><span>Day 3</span> Train south to Provence</li>
+              <li><span>Day 6</span> Lavender fields</li>
+            </ol>
             <p class="meta"><span>6 days</span><strong>$1,650</strong></p>
           </article>
-          <article class="card">
+          <article class="card" data-mood="mountains">
             <img src="images/alps.jpg" width="1152" height="864" alt="A red train crossing a stone viaduct in the Swiss Alps">
             <h3>Swiss Alps</h3>
             <p>Scenic trains and mountain hikes.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Scenic train into the mountains</li>
+              <li><span>Day 3</span> A guided hike</li>
+              <li><span>Day 5</span> One more valley</li>
+            </ol>
             <p class="meta"><span>5 days</span><strong>$1,890</strong></p>
           </article>
-          <article class="card">
+          <article class="card" data-mood="culture">
             <img src="images/kyoto.jpg" width="1152" height="864" alt="A stone path through a Kyoto bamboo grove to a wooden gate">
             <h3>Kyoto Classic</h3>
             <p>Shrines, tea houses and bamboo groves.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Shrines in the old city</li>
+              <li><span>Day 4</span> Tea house and bamboo grove</li>
+              <li><span>Day 8</span> A quiet morning</li>
+            </ol>
             <p class="meta"><span>8 days</span><strong>$2,150</strong></p>
           </article>
-          <article class="card">
+          <article class="card" data-mood="coast">
             <img src="images/santorini.jpg" width="1152" height="864" alt="White houses and a blue dome above the Santorini caldera at sunset">
             <h3>Santorini Sunsets</h3>
             <p>Island hopping across the Aegean.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Caldera views at sunset</li>
+              <li><span>Day 3</span> A day on another island</li>
+              <li><span>Day 5</span> A last swim</li>
+            </ol>
             <p class="meta"><span>5 days</span><strong>$1,480</strong></p>
           </article>
-          <article class="card">
+          <article class="card" data-mood="culture">
             <img src="images/morocco.jpg" width="1152" height="864" alt="Lantern-lit tents among desert dunes at dusk">
             <h3>Morocco Discovery</h3>
             <p>Markets, desert camps and old medinas.</p>
+            <ol class="days">
+              <li><span>Day 1</span> Markets in the medina</li>
+              <li><span>Day 5</span> A night in a desert camp</li>
+              <li><span>Day 9</span> A last walk in the old city</li>
+            </ol>
             <p class="meta"><span>9 days</span><strong>$1,720</strong></p>
           </article>
         </div>
@@ -112,7 +151,10 @@
       <div class="shell">
         <h2>Ready to go?</h2>
         <p>Tell us where and when. We'll build the rest.</p>
-        <a class="btn" href="mailto:hello@wanderly.example?subject=Plan%20my%20trip">Plan your trip</a>
+        <a class="btn plan-all" href="mailto:hello@wanderly.example?subject=Plan%20my%20trip">Plan your trip</a>
+        <a class="btn plan-coast" href="mailto:hello@wanderly.example?subject=Plan%20my%20trip%3A%20Bali%20or%20Santorini">Plan Bali or Santorini</a>
+        <a class="btn plan-mountains" href="mailto:hello@wanderly.example?subject=Plan%20my%20trip%3A%20Swiss%20Alps">Plan the Swiss Alps</a>
+        <a class="btn plan-culture" href="mailto:hello@wanderly.example?subject=Plan%20my%20trip%3A%20Paris%2C%20Kyoto%2C%20or%20Morocco">Plan Paris, Kyoto, or Morocco</a>
       </div>
     </section>
   </main>
