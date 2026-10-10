@@ -117,13 +117,23 @@ a { color: inherit; }
 }
 
 .hero-inner {
-  max-width: 44rem;
+  max-width: 52rem;
   margin-inline: auto;
-  padding: var(--space-8) var(--space-6);
+  padding: 0;
+  overflow: hidden;
   background: color-mix(in srgb, var(--color-card) 92%, var(--color-muted));
   border: 3px solid var(--color-primary);
   box-shadow: 8px 8px 0 var(--color-secondary);
 }
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 36vw, 22rem);
+  object-fit: cover;
+}
+
+.hero-copy { padding: var(--space-8) var(--space-6); }
 
 .kicker {
   margin: 0 0 var(--space-4);
@@ -219,7 +229,8 @@ h1 {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: var(--space-5);
+  padding: 0;
+  overflow: hidden;
   background: var(--color-card);
   color: var(--color-card-foreground);
   border: 2px solid var(--color-border);
@@ -244,19 +255,33 @@ h1 {
   box-shadow: 7px 9px 0 color-mix(in srgb, var(--color-secondary) 45%, transparent);
 }
 
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  min-height: 0;
+  flex: none;
+}
+
 .card h3 {
-  margin: 0 0 var(--space-2);
+  margin: var(--space-5) var(--space-5) var(--space-2);
   font-size: 1.25rem;
 }
 
-.card p { margin: 0; color: var(--color-muted-foreground); }
+.card p:not(.meta) {
+  margin: 0 var(--space-5);
+  color: var(--color-muted-foreground);
+}
 
 .meta {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: var(--space-4);
-  margin-top: auto;
+  margin: auto var(--space-5) var(--space-5);
+  color: var(--color-foreground);
   padding-top: var(--space-5);
   font-size: 0.95rem;
   color: var(--color-foreground);
@@ -344,7 +369,8 @@ h1 {
   .shell { width: min(1120px, calc(100% - 2rem)); }
   .nav-list { justify-content: space-between; width: 100%; }
   .nav-list a { padding-inline: 0.35rem; }
-  .hero-inner { padding: var(--space-6) var(--space-4); box-shadow: 5px 5px 0 var(--color-secondary); }
+  .hero-copy { padding: var(--space-6) var(--space-4); }
+  .hero-inner { box-shadow: 5px 5px 0 var(--color-secondary); }
   .section { padding: var(--space-8) 0; }
 }
 
